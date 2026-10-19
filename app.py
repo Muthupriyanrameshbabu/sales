@@ -1,3 +1,23 @@
+import sys
+from pathlib import Path
+
+# Add the root directory and src directory to Python's path
+ROOT_DIR = Path(__file__).resolve().parent
+sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR / "src"))
+
+# Now your imports will work smoothly
+from src.validator import (
+    auto_detect_mapping,
+    get_excel_sheets,
+    load_uploaded_file,
+    validate_and_clean_data,
+)
+
+
+
+
+
 """
 Sales Performance Analysis and Reporting Dashboard
 Main Streamlit Application implementing Enterprise Power BI aesthetics,
